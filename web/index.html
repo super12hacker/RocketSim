@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RocketSim 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="panel">
+      <h1>RocketSim 3D</h1>
+      <div class="row">
+        <span>Mode</span>
+        <button id="localBtn" class="active">Local</button>
+        <button id="multiBtn">Multiplayer</button>
+      </div>
+      <div class="row stats-row">
+        <span>Score</span>
+        <strong id="score">0 - 0</strong>
+      </div>
+      <div class="row stats-row">
+        <span>Boost</span>
+        <strong id="boost">100%</strong>
+      </div>
+      <div id="roomBox" class="row hidden">
+        <span>Room</span>
+        <input id="roomInput" value="" placeholder="code" maxlength="8" />
+      </div>
+      <div class="row buttons">
+        <button id="startBtn">Start Match</button>
+        <button id="hostBtn">Host</button>
+        <button id="joinBtn">Join</button>
+      </div>
+      <div id="status">Ready</div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.10.0/dist/peerjs.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
